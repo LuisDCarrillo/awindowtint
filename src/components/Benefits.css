@@ -1,0 +1,105 @@
+.benefits {
+  background-color: #f3f4f6; /* Fondo gris claro */
+  color: #1f2937; /* Texto gris oscuro */
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin: 20px auto;
+  max-width: 1200px; /* Ancho máximo */
+  border: 3px solid #e63946; /* Borde rojo */
+}
+
+.benefits h2 {
+  color: #e63946; /* Rojo moderno */
+  font-size: 2.5rem; /* Tamaño grande */
+  margin-bottom: 20px;
+  font-weight: 700; /* Negrita */
+}
+
+.benefits img {
+  max-width: 100%; /* Limita el ancho al contenedor */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.benefits ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se adapten a varias filas */
+  gap: 20px; /* Espaciado entre elementos */
+  justify-content: center; /* Centra los elementos */
+}
+
+.benefits li {
+  font-size: 1.2rem; /* Texto más grande */
+  margin: 15px 0;
+  color: #374151; /* Texto gris intermedio */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaciado entre ícono y texto */
+  flex: 1 1 calc(33.333% - 20px); /* Tres columnas en pantallas grandes */
+  max-width: 300px; /* Ancho máximo de cada elemento */
+}
+
+.benefits li::before {
+  content: '✅';
+  color: #e63946; /* Ícono rojo */
+  font-size: 1.5rem;
+}
+
+.benefits li span {
+  color: #1f2937; /* Texto gris oscuro */
+  font-weight: 600; /* Negrita */
+}
+
+/* Responsivo para tablets */
+@media (max-width: 1024px) {
+  .benefits h2 {
+    font-size: 2rem; /* Tamaño de título reducido */
+  }
+
+  .benefits li {
+    font-size: 1.1rem;
+    flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
+  }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .benefits {
+    padding: 30px 15px; /* Ajustar el espaciado */
+  }
+
+  .benefits h2 {
+    font-size: 1.8rem;
+  }
+
+  .benefits li {
+    font-size: 1rem;
+    flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+    max-width: none; /* Quita el límite de ancho */
+    text-align: left; /* Ajusta la alineación del texto */
+    justify-content: flex-start; /* Alinea los íconos con el texto */
+  }
+}
+
+/* Ajuste adicional para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .benefits h2 {
+    font-size: 1.5rem;
+  }
+
+  .benefits li {
+    font-size: 0.9rem; /* Tamaño de texto más pequeño */
+    gap: 8px; /* Reduce el espacio entre ícono y texto */
+  }
+
+  .benefits li::before {
+    font-size: 1.2rem; /* Ícono más pequeño */
+  }
+}

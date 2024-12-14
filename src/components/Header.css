@@ -1,0 +1,73 @@
+.header {
+  background-color: white; /* Fondo blanco */
+  color: var(--color-text-secondary); /* Texto gris oscuro */
+  text-align: center;
+  padding: 30px 20px;
+  border: 3px solid var(--color-accent); /* Borde rojo */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra moderna */
+  margin: 20px auto;
+  max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+.header-title {
+  font-size: 3rem; /* Título grande */
+  font-weight: 700; /* Texto más grueso */
+  color: var(--color-accent); /* Rojo moderno */
+  margin: 0;
+}
+
+.header-tagline {
+  font-size: 1.5rem; /* Subtítulo más grande */
+  color: var(--color-text-secondary); /* Gris oscuro */
+  margin-top: 10px;
+  font-weight: 400;
+  line-height: 1.4; /* Mejora legibilidad */
+}
+
+.header-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--color-accent); /* Botón rojo */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-button:hover {
+  background-color: #ff6f61; /* Rojo más claro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+.header-video {
+  width: 90%; /* Ocupa el 90% del ancho del contenedor */
+  max-width: 800px; /* Ancho máximo más pequeño */
+  height: 60%; /* Mantener la proporción original */
+  max-height: 500px; /* Altura máxima más pequeña */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra alrededor del video */
+  margin: 20px auto; /* Centrar el video */
+  display: block; /* Asegura el centrado con margen */
+}
+@media (max-width: 768px) {
+  .header-video {
+    max-width: 100%; /* Ancho completo en pantallas pequeñas */
+    border-radius: 5px; /* Reducir redondeado en dispositivos pequeños */
+  }
+
+  .header-title {
+    font-size: 2rem; /* Reducir tamaño del título en dispositivos pequeños */
+  }
+
+  .header-tagline {
+    font-size: 1.2rem; /* Reducir subtítulo en pantallas pequeñas */
+  }
+
+  .header-button {
+    font-size: 0.9rem; /* Botón más pequeño en pantallas pequeñas */
+    padding: 8px 16px; /* Ajustar relleno del botón */
+  }
+}

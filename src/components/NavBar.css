@@ -1,0 +1,119 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #a01e08; /* Fondo oscuro */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: black;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo img {
+  max-height: 50px; /* Controla la altura para que no desborde el navbar */
+  max-width: 600px; /* Controla el ancho máximo */
+  width: auto; /* Mantiene la proporción de la imagen */
+  object-fit: contain; /* Asegura que la imagen se ajuste sin recortes */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+
+  margin-left: 920px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: rgb(248, 248, 248);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+.number{
+  color: #fff;
+  text-align: right;
+  font-size: 15px;
+}
+.navbar-link:hover {
+  background-color: #dbd68e; /* Fondo rojo */
+  color: var(--color-text-secondary); /* Texto negro */
+  border-color: var(--color-accent); /* Borde rojo */
+
+}
+
+/* Estilo del icono de Instagram */
+.instagram-link { 
+  display: flex;
+  align-items: center;
+
+}
+
+.instagram-icon {
+  width: 24px; /* Tamaño del icono */
+  height: 24px;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 10px;
+  
+}
+
+.instagram-icon:hover {
+  transform: scale(1.2); /* Efecto de zoom al pasar el mouse */
+}
+@media (max-width: 1000px) {
+  .navbar{
+    padding: 15px;
+  }
+  .navbar-links{
+    margin-left: 0;
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+   
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  
+  }
+
+  .navbar-link {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo img {
+    height: 40px;
+  }
+
+  .navbar-link {
+    font-size: 0.9rem;
+  }
+
+  .instagram-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
