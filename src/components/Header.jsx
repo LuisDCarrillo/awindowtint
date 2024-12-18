@@ -3,7 +3,7 @@ import './Header.css';
 const Header = () => {
   return (
     <header className="header">
-      <h1 className="header-title">Welcome to Window Tinting</h1>
+      <h1 className="header-title"> A Window Tint </h1>
         <p className="header-tagline">
           We provide high-quality tinting services for your <br />
           commercial, residential, and automotive needs.

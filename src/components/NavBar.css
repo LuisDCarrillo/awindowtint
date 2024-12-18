@@ -4,7 +4,7 @@
   align-items: center;
   padding: 15px 30px;
   background-color: #a01e08; /* Fondo oscuro */
-  position: sticky;
+  position: static;
   top: 0;
   z-index: 1000;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -18,8 +18,8 @@
 }
 
 .navbar-logo img {
-  max-height: 75px; /* Ajusta el tamaño máximo del logo */
-  max-width: 100%; /* Evita desbordes horizontales */
+  max-height: 40%; /* Ajusta el tamaño máximo del logo */
+  max-width: 40%; /* Evita desbordes horizontales */
   object-fit: contain; /* Ajusta la imagen dentro del contenedor */
   align-self: flex-start;
   padding-left: 0px;
@@ -37,7 +37,10 @@
   font-size: 15px;
   margin-left: 15px;
 }
-
+.navbar-email {
+  color: #fff;
+  font-size: 15px;
+}
 .navbar-link {
   text-decoration: none;
   color: rgb(248, 248, 248);
@@ -120,21 +123,48 @@
 
 @media (max-width: 480px) {
   .navbar {
-    position: static;
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, info a la derecha */
+    align-items: center; /* Alinea verticalmente */
+    flex-direction: row; /* Mantén los elementos en una fila */
+    padding: 10px 15px; /* Ajusta el espaciado */
   }
+
   .navbar-logo img {
-    max-height: 40px;
+    max-height: 100%; /* Limita la altura del logo */
+    max-width: 100%; /* Limita la anchura del logo */
+    object-fit: contain; /* Asegura que el logo mantenga su proporción */
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column; /* Acomoda los elementos en columna */
+    align-items: flex-end; /* Alinea a la derecha */
+    gap: 10px; /* Espaciado entre los elementos */
   }
 
   .navbar-link {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Tamaño más pequeño del texto */
+    text-align: left; /* Asegura que el texto quede alineado a la izquierda */
+    width: 100%;
+  }
+
+  .number {
+    font-size: 14px; /* Ajusta el tamaño del número */
   }
 
   .instagram-icon {
     width: 20px;
     height: 20px;
+     /* Espaciado entre ícono y texto */
+    align-items: flex-end;
+    display: flex;
   }
-  .number {
-    font-size: 14px;
+  .instagram-link {
+    gap: 3px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin: 0;
   }
 }
