@@ -10,7 +10,7 @@ import Navbar from './components/NavBar'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Navbar />
-    <img src="/navbar.png" className="navbar-logo" alt="navbar" />
+    
     <Header />
     <div className="main-content">
       <Benefits />
