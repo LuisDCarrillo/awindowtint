@@ -53,8 +53,8 @@
 }
 
 .navbar-link:hover {
-  background-color: #dbd68e; /* Fondo beige */
-  color: #000; /* Texto negro */
+  background-color: #ffffff; 
+  color: #000; 
   border-color: #a01e08; /* Borde rojo oscuro */
 }
 
@@ -156,7 +156,7 @@
   .instagram-icon {
     width: 20px;
     height: 20px;
-     /* Espaciado entre ícono y texto */
+   
     align-items: flex-end;
     display: flex;
   }

@@ -6,6 +6,7 @@ import Benefits from './components/Benefits'
 import Services from './components/Services'
 import Footer from './components/Footer'
 import Navbar from './components/NavBar'
+import Videos from './components/Videos'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
     <div className="main-content">
       <Benefits />
       <Services />
+      <Videos />
     </div>
     <Footer />
   </StrictMode>,

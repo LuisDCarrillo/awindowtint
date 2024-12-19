@@ -1,0 +1,135 @@
+/* Variables Globales */
+:root {
+    --primary-color: #e63946;
+    --text-color: #1f2937;
+    --background-color: white;
+    --shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Reseteo general */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Contenedor principal */
+  .videos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    max-width: 100%;
+    margin: 1rem auto;
+    border: 3px solid var(--primary-color);
+  }
+  
+  /* Estilo para cada tarjeta de video */
+  .video-card {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+   
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* Título del video */
+  .video-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+  
+  /* Descripción del video */
+  .video-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  
+  /* Reproductor de video */
+  .video-player {
+    width: 100%;
+    height: auto;
+    
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .video-player:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsividad */
+  @media (max-width: 1024px) {
+    .videos-container {
+      padding: 1.5rem 1rem;
+    }
+  
+    .video-title {
+      font-size: 1.6rem;
+    }
+  
+    .video-description {
+      font-size: 1rem;
+    }
+  
+    .video-player {
+      max-height: 18rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .videos-container {
+      padding: 1rem 0.5rem;
+    }
+  
+    .video-title {
+      font-size: 1.4rem;
+    }
+  
+    .video-description {
+      font-size: 0.95rem;
+    }
+  
+    .video-player {
+      max-height: 15rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .videos-container {
+      padding: 0.5rem;
+      margin: 0;
+    }
+  
+    .video-title {
+      font-size: 1.2rem;
+    }
+  
+    .video-description {
+      font-size: 0.9rem;
+    }
+  
+    .video-player {
+      max-height: 12rem;
+    }
+  }
+  
