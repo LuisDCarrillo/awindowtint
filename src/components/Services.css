@@ -54,10 +54,10 @@ body {
 }
 
 .slick-slide img {
-  max-width: 100%;
-  height: auto;
+  width: 265px;
+  height: 199px;
   border-radius: 0.5rem;
-  object-fit: cover;
+  object-fit: contain;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease-in-out;
 }
@@ -74,6 +74,33 @@ body {
   text-align: justify;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+/* Flechas de navegación */
+.slick-prev,
+.slick-next {
+   /* Color de fondo */
+  border-radius: 50%; /* Hacerlas circulares */
+  padding: 15px; /* Aumentamos el tamaño */
+  font-size: 24px; /* Hacemos las flechas más grandes */
+  color: rgb(241, 15, 15); /* Color de las flechas */
+  z-index: 10;
+  font-size: 0;
+}
+
+.slick-prev {
+  left: 10px;
+  
+}
+
+.slick-next {
+  right: 10px;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'slick'; /* Usar la fuente predeterminada de Slick para iconos */
+  font-size: 30px; /* Tamaño de los íconos de las flechas */
+  color: rgb(252, 20, 20); /* Color de las flechas */
 }
 
 /* Responsividad */
