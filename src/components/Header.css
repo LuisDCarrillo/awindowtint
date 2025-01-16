@@ -15,6 +15,7 @@
   font-weight: 700; /* Texto más grueso */
   color: var(--color-accent); /* Rojo moderno */
   margin: 0;
+  font-family: 'Designer', sans-serif;
 }
 
 .header-tagline {

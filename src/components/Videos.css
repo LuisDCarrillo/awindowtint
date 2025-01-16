@@ -54,6 +54,7 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: var(--primary-color);
+    font-family: 'Designer', sans-serif;
   }
   
   /* Descripción del video */

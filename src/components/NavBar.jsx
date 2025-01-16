@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar" role="navigation" aria-label="Main Navigation">
       <div className="navbar-logo">
         <img 
-          src="/Awindowtint.png" 
+          src="/awindowtint-web.png" 
           alt="A Window Tint Logo - Professional Tinting Services" 
           className="logo-image" 
         />
@@ -39,6 +39,13 @@ const Navbar = () => {
             className="instagram-icon"
           />
         </a>
+        <a href=""
+        target='_blank'
+        rel='noopener noreferrer'
+        className='navbar-link facebook-link'
+        aria-label='Visit our Facebook profile'
+        >
+          Facebook </a>
       </div>
     </nav>
   );

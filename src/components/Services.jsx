@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
+import  { useState } from "react";
 import Slider from "react-slick";
 import './Services.css';
 
-const ServiceCarousel = ({ service, settings }) => (
+const ServiceCarousel = ({ service, settings, onImageClick}) => (
   <div className="service-slide">
     <h3>{`Professional ${service.type}`}</h3>
     <p>{service.description}</p>
     <Slider {...settings}>
       {service.images.map((image, index) => (
-        <div key={index} className="sub-slide">
+        <div key={index} className="sub-slide" onClick={()=> onImageClick(image)} >
           <img src={image.src} alt={image.alt} loading="lazy" />
         </div>
       ))}
@@ -17,6 +18,17 @@ const ServiceCarousel = ({ service, settings }) => (
 );
 
 const Services = () => {
+  
+  const [modalImage, setModalImage] = useState(null);
+
+  const handleImageClick = (image) => {
+    setModalImage(image);
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
+  };
+
   const mainCarouselSettings = {
     dots: true,
     infinite: true,
@@ -81,7 +93,11 @@ const Services = () => {
       <div className="carousel-container">
         <Slider {...mainCarouselSettings}>
           {services.map((service, index) => (
-            <ServiceCarousel key={index} service={service} settings={subCarouselSettings} />
+            <ServiceCarousel
+             key={index} 
+             service={service}
+             settings={subCarouselSettings}
+              onImageClick={handleImageClick} />
           ))}
         </Slider>
       </div>
@@ -89,6 +105,14 @@ const Services = () => {
         <p>We offer our services across Central Florida and the surrounding areas.</p>
         <p>Our experts are dedicated to providing top-notch solutions tailored to your needs.</p>
       </div>
+       {/* Modal */}
+       {modalImage && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content">
+            <img src={modalImage.src} alt={modalImage.alt} />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

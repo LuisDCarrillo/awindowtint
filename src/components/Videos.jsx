@@ -16,7 +16,9 @@ const Videos = () => {
           loop
           autoPlay
           muted
+          preload='auto'
           aria-label="Car window tinting video"
+          playsInline
         />
       </div>
 
@@ -32,8 +34,9 @@ const Videos = () => {
           loop
           autoPlay
           muted
-        
+          preload='auto'
           aria-label="Residential window tinting video"
+          playsInline
         />
       </div>
 
@@ -50,6 +53,8 @@ const Videos = () => {
           autoPlay
           muted
           aria-label="Commercial window tinting video"
+          preload='auto'
+          playsInline
         />
       </div>
     </div>

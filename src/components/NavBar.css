@@ -18,8 +18,8 @@
 }
 
 .navbar-logo img {
-  max-height: 40%; /* Ajusta el tamaño máximo del logo */
-  max-width: 40%; /* Evita desbordes horizontales */
+  max-height: 100%; /* Ajusta el tamaño máximo del logo */
+  max-width: 100%; /* Evita desbordes horizontales */
   object-fit: contain; /* Ajusta la imagen dentro del contenedor */
   align-self: flex-start;
   padding-left: 0px;

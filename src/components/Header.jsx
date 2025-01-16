@@ -1,6 +1,7 @@
 import './Header.css';
 
 const Header = () => {
+  const phoneNumber="tel:+13214021863";
   return (
     <header className="header" role="banner">
       <h1 className="header-title">Awindowtint - Expert Tinting Services</h1>
@@ -14,7 +15,7 @@ const Header = () => {
       </video>
       <button
         className="header-button"
-        onClick={() => window.open("https://www.instagram.com/a.window.tinting?igsh=c3VseXAzMGZwdXVj", "_blank")}
+        onClick={() => window.location.href= `tel:${phoneNumber}`}
         aria-label="Get a free estimate for your window tinting project"
       >
        Get Your Free Estimate
