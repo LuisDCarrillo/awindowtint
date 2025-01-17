@@ -1,6 +1,13 @@
+import { useState } from 'react';
 import './NavBar.css';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar" role="navigation" aria-label="Main Navigation">
       <div className="navbar-logo">
@@ -10,7 +17,14 @@ const Navbar = () => {
           className="logo-image" 
         />
       </div>
-      <div className="navbar-links">
+      <button 
+        className="burger-button" 
+        onClick={toggleMenu} 
+        aria-label="Toggle navigation menu"
+      >
+        ☰
+      </button>
+      <div className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
         <a
           href="tel:+13214021863"
           className="number"
@@ -32,20 +46,25 @@ const Navbar = () => {
           className="navbar-link instagram-link"
           aria-label="Visit our Instagram profile"
         >
-          Instagram
+          
           <img
             src="/instagram-logo.png"
             alt="Follow us on Instagram"
             className="instagram-icon"
           />
         </a>
-        <a href=""
-        target='_blank'
-        rel='noopener noreferrer'
-        className='navbar-link facebook-link'
-        aria-label='Visit our Facebook profile'
+        <a
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+          className="navbar-link facebook-link"
+          aria-label="Visit our Facebook profile"
         >
-          Facebook </a>
+          <img 
+          src="/logo-fc.png" 
+          alt="Follow us on Facebook" 
+          className="facebook-icon" />
+        </a>
       </div>
     </nav>
   );
