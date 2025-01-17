@@ -3,9 +3,10 @@
 @import "/node_modules/slick-carousel/slick/slick.css";
 @import "/node_modules/slick-carousel/slick/slick-theme.css";
 
+
 @font-face {
   font-family: 'Designer';
-  src: url('public/fonts/Designer.otf') format('opentype');
+  src: url('/fonts/Designer.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }

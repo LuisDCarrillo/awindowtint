@@ -8,6 +8,7 @@
   top: 0;
   z-index: 1000;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
 }
 
 .burger-button {
@@ -59,12 +60,17 @@
   color: #fff;
   font-size: 14px;
   text-decoration: none;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
   text-align: left;
   display: block;
 }
-
+.navbar-link.facebook-link{
+  padding: 0px;
+}
+.navbar-link.instagram-link{
+  padding: 0px;
+}
 .instagram-icon {
   width: 24px;
   height: 24px;
@@ -75,12 +81,12 @@
   width: 50px;
   height: 50px;
   transition: transform 0.3s ease-in-out;
-  margin: auto;
+  
 }
 .facebook-icon,.instagram-icon{
   align-self: flex-end;
-  gap: 40px;
-
+  gap: 0px;
+  
 }
 .instagram-icon:hover,
 .facebook-icon:hover {
@@ -97,6 +103,7 @@
     display: none; /* Oculto inicialmente */
     flex-direction: column;
     align-items: flex-start;
+    margin: auto;
   }
 
   .navbar-links.open {
@@ -106,15 +113,19 @@
 
 @media (max-width: 480px) {
   .navbar {
-    padding: 10px 15px;
+    gap: 10px;
+    padding: 10px;
   }
 
   .navbar-logo img {
-    max-height: 30px;
+    max-height: 150%;
+    max-width: 150%;
+    
   }
 
   .navbar-links {
     gap: 10px;
+    padding: 10px;
   }
 
   .number,
