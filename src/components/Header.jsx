@@ -4,7 +4,7 @@ const Header = () => {
   const phoneNumber="tel:+13214021863";
   return (
     <header className="header" role="banner">
-      <h1 className="header-title">Awindowtint - Expert Tinting Services</h1>
+      <h1 className="header-title">Awindowtint - Tinting Services</h1>
       <p className="header-tagline">
       We provide high-quality tinting services for your <br />
       commercial, residential, and automotive needs.
