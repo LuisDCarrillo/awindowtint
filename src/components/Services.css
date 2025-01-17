@@ -104,6 +104,7 @@ body {
   text-align: justify;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  font-family: 'Arial', sans-serif;
 }
 
 /* Flechas de navegación */
