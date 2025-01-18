@@ -31,6 +31,8 @@
   border: none;
   color: white;
   cursor: pointer;
+  margin-left: auto; /* Empuja el botón hacia la derecha */
+  z-index: 2000;
 }
 
 .navbar-logo {
@@ -96,17 +98,18 @@
 @media (max-width: 778px) {
   .burger-button {
     display: block;
-    align-self: flex-end;
-  }
+    align-self: center; /* Centra verticalmente dentro del navbar */
+    }
   .desktop-links {
     display: none;
   }
 
   .mobile-links {
+
     display: flex !important; /* Fuerza que se muestre */
     flex-direction: column;
     gap: 10px;
-    position: absolute;
+    position:sticky ;
     top: 100%;
     left: 0;
     right: 0;
@@ -120,7 +123,7 @@
 
   .mobile-links.open {
     max-height: 500px !important; /* Espacio suficiente para mostrar el contenido */
-    padding: 10px; /* Añade padding al abrir */
+    padding: 10px 0; /* Añade padding al abrir */
     overflow: visible !important; /* Permite mostrar el contenido */
   }
 
@@ -142,5 +145,14 @@
   .facebook-icon {
     width: 40px;
     height: 40px;
+  }
+  .navbar-logo{
+    max-width: 150%;
+    max-height: 150%;
+  }
+  .burger-button{
+    display: block;
+    align-self: flex-end !important;
+    align-items: flex-end;
   }
 }
