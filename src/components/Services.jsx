@@ -5,7 +5,7 @@ import './Services.css';
 
 const ServiceCarousel = ({ service, settings, onImageClick}) => (
   <div className="service-slide">
-    <h3>{`Professional ${service.type}`}</h3>
+    
     <p>{service.description}</p>
     <Slider {...settings}>
       {service.images.map((image, index) => (

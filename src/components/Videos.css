@@ -69,8 +69,8 @@
   /* Reproductor de video */
   .video-player {
     width: 100%;
-    height: auto;
-    
+    max-width: 800px; /* Limitar a pantalla completa */
+    max-height: 500px; /* Mantiene proporción automática */
     transition: transform 0.3s ease-in-out;
   }
   
@@ -92,9 +92,7 @@
       font-size: 1rem;
     }
   
-    .video-player {
-      max-height: 18rem;
-    }
+ 
   }
   
   @media (max-width: 768px) {
@@ -110,9 +108,7 @@
       font-size: 0.95rem;
     }
   
-    .video-player {
-      max-height: 15rem;
-    }
+ 
   }
   
   @media (max-width: 480px) {
@@ -129,8 +125,5 @@
       font-size: 0.9rem;
     }
   
-    .video-player {
-      max-height: 12rem;
-    }
   }
   

@@ -152,7 +152,5 @@
   }
   .burger-button{
     display: block;
-    align-self: flex-end !important;
-    align-items: flex-end;
   }
 }
