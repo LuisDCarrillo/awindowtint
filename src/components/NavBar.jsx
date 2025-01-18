@@ -5,7 +5,8 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prevState) => !prevState);
+    console.log("Menu open state:", !isMenuOpen);
   };
 
   return (
@@ -24,46 +25,34 @@ const Navbar = () => {
       >
         ☰
       </button>
-      <div className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
-        <a
-          href="tel:+13214021863"
-          className="number"
-          aria-label="Call or text us at +1 (321) 402-1863"
-        >
+      {/* Links para pantallas grandes */}
+      <div className="navbar-links desktop-links">
+        <a href="tel:+13214021863" className="number" aria-label="Call us">
           Call or Text +1 (321) 402-1863
         </a>
-        <a
-          className="navbar-email"
-          href="mailto:awindowtint3171@gmail.com?subject=Services&body=Hello, I would like to know more about your services."
-          aria-label="Send an email to awindowtint3171@gmail.com"
-        >
+        <a href="mailto:awindowtint3171@gmail.com" className="navbar-email" aria-label="Email us">
           awindowtint3171@gmail.com
         </a>
-        <a
-          href="https://www.instagram.com/a.window.tinting?igsh=c3VseXAzMGZwdXVj"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="navbar-link instagram-link"
-          aria-label="Visit our Instagram profile"
-        >
-          
-          <img
-            src="/instagram-logo.png"
-            alt="Follow us on Instagram"
-            className="instagram-icon"
-          />
+        <a href="https://www.instagram.com/a.window.tinting" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="/instagram-logo.png" alt="Instagram" className="instagram-icon" />
         </a>
-        <a
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-          className="navbar-link facebook-link"
-          aria-label="Visit our Facebook profile"
-        >
-          <img 
-          src="/logo-fc.png" 
-          alt="Follow us on Facebook" 
-          className="facebook-icon" />
+        <a href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="/logo-fc.png" alt="Facebook" className="facebook-icon" />
+        </a>
+      </div>
+      {/* Links para pantallas pequeñas */}
+      <div className={`navbar-links mobile-links ${isMenuOpen ? 'open' : ''}`}>
+        <a href="tel:+13214021863" className="number" aria-label="Call us">
+          Call or Text +1 (321) 402-1863
+        </a>
+        <a href="mailto:awindowtint3171@gmail.com" className="navbar-email" aria-label="Email us">
+          awindowtint3171@gmail.com
+        </a>
+        <a href="https://www.instagram.com/a.window.tinting" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="/instagram-logo.png" alt="Instagram" className="instagram-icon" />
+        </a>
+        <a href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="/logo-fc.png" alt="Facebook" className="facebook-icon" />
         </a>
       </div>
     </nav>
