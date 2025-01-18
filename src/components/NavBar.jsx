@@ -51,7 +51,7 @@ const Navbar = () => {
         <a href="https://www.instagram.com/a.window.tinting" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <img src="/instagram-logo.png" alt="Instagram" className="instagram-icon" />
         </a>
-        <a href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <a href="https://www.facebook.com/Awindowtint" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <img src="/logo-fc.png" alt="Facebook" className="facebook-icon" />
         </a>
       </div>

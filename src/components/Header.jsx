@@ -1,7 +1,7 @@
 import './Header.css';
 
 const Header = () => {
-  const phoneNumber="tel:+1(321)402-1863";
+  const phoneNumber="+1(321)402-1863";
   return (
     <header className="header" role="banner">
       <h1 className="header-title">Awindowtint - Tinting Services</h1>
